@@ -5,13 +5,20 @@ This repository contains a base project to build a web application for the cours
 Web Technologies II,  which is part of the HBO-ICT Software Engineering program at Hanze
 University of Applied  Sciences in Groningen, Netherlands.
 
+To run the application, use the following command.
+
+```
+php -S localhost:8000 -t public
+```
+
 This repository contains a complete `composer.json` file for this project, as well as an
 empty SQLite database in `database.db`. In addition, it contains an empty front controller
 in `public/index.php`, an empty kernel implementation in `src/Framework/Kernel/Kernel.php`
 and an empty controller in `src/App/IndexController.php`.
 
 This repository also contains an implementation of `Psr\Http\Message\StreamInterface` in
-`src/Framework/Http/Stream.php` which may be used when creating the framework, and an empty
+`src/Framework/Http/Stream.php` which may be used when creating the framework, an empty implementation
+of `Psr\Http\Message\MessageInterface` with some logic to use a string as a message body, and an empty
 dependency injection container with some hints as to its implementation in
 `src/Framework/DependencyInjection/Container.php` which can also be used as a guide when
 creating a dependency injection container. Finally, the file `src/Framework/Http/ServerRequest.php`

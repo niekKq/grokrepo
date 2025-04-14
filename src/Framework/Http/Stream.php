@@ -8,6 +8,12 @@ class Stream implements StreamInterface
 {
     public function __construct(private $stream)
     {
+        if (is_string($this->stream)) {
+            $stream = fopen('php://temp', 'r+b');
+            fwrite($stream, $this->stream);
+            rewind($stream);
+            $this->stream = $stream;
+        }
     }
 
     public function __toString(): string

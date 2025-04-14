@@ -17,6 +17,7 @@
     "ext-pdo": "*",
     "hanze/itvb21web2-interfaces": "^1.0",
     "symfony/var-dumper": "^7.2",
-    "monolog/monolog": "^3.8"
+    "monolog/monolog": "^3.8",
+    "guzzlehttp/psr7": "^2.7"
   }
 }
